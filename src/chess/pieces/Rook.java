@@ -10,7 +10,6 @@ public class Rook extends ChessPiece {
         super(board, color);
     }
 
-    // O toString será apenas a letra, pois ela irá entrar na posicao do "-" dentro do tabuleiro
     @Override
     public String toString(){
         return  "R";
