@@ -35,4 +35,11 @@ public class Board {
     public Piece piece (Position position){
         return pieces[position.getRow()][position.getColumn()];
     }
+
+    // Ele irá atribuir a peça que veio como argumento na matriz de peças
+    public void placePiece(Piece piece, Position position){
+        pieces[position.getRow()][position.getColumn()] = piece;
+        // Agora a gente fala que a peça informada, não está mais na posicao nula, e sim na nova posicao
+        piece.position = position;
+    }
 }
