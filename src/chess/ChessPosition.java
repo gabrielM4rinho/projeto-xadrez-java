@@ -24,7 +24,6 @@ public class ChessPosition {
     }
 
     protected Position toPosition(){
-        // A parte da coluna é dessa forma pois o valor unicode do carectere 'a' é igual a 1
         return new Position(8 - row, column -'a');
     }
 
