@@ -90,7 +90,7 @@ public class ChessMatch {
         if(movedPiece instanceof Pawn){
             if((movedPiece.getColor() == Color.WHITE && target.getRow() == 0) || (movedPiece.getColor() == Color.BLACK && target.getRow() == 7)){
                 promoted = (ChessPiece)board.piece(target);
-                promoted = replacePromotedPiece("Q");
+                //promoted = replacePromotedPiece("Q");
             }
         }
 
@@ -154,6 +154,10 @@ public class ChessMatch {
         ChessPiece newPiece = newPiece(type, promoted.getColor());
         board.placePiece(newPiece, pos);
         piecesOnTheBoard.add(newPiece);
+
+        check = testCheck(currentPlayer) ? true : false;
+        checkMate = testCheckMate(currentPlayer) ? true : false;
+
         return newPiece;
     }
 
